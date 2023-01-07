@@ -12,11 +12,17 @@
       href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,800;1,600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/map.css" />
   </head>
   <body>
     <div id="map"></div>
-    <div class="map-overlay" id="legend"></div>
+    <div id="map-overlay">
+      <p>Zoom and scroll to see over 1,300 restaurants!</p>
+    </div>
 
     <script>
       mapboxgl.accessToken =
@@ -40,7 +46,16 @@
 
         center: [-99.13, 40.648],
         zoom: zoom
-        // ----------------------------------------------
+        
+      });
+
+      const overlay = document.getElementById("map-overlay");
+      document.addEventListener('mousemove', (e) => {
+        overlay.style.opacity = 0;
+      });
+
+      document.addEventListener('touchmove', (e) => {
+        overlay.style.opacity = 0;
       });
     </script>
   </body>
