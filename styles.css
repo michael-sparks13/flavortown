@@ -12,7 +12,6 @@ body {
 
 
 .bg {
-    z-index: -100;
     background-image: url('Guy Fieris head.svg');
     background-repeat: repeat;
     background-size: 20%;
@@ -55,25 +54,28 @@ h2 {
 }
 
 .map-link {
-    width: 100%;
+    display: flex;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
-    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
 }
 
 .map-link button {
     border-radius: 50%;
-    padding: 15px;
-    border: 1px solid #ffd303;
+    padding: 25px;
+    border: 2px solid #367cc9;
     background-color: #ffd303;
     align-self: auto;
     color: #ff2b00;
     text-shadow: 20% black;
+    font-weight: bold;
 }
 
 button:hover {
-    color: #ffd303;
-    background-color: #ff2b00;
+    background-color: #367cc9;
+    color: white;
 }
 
 
