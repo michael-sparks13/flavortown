@@ -69,7 +69,11 @@ h2 {
     align-self: auto;
     color: #ff2b00;
     text-shadow: 20% black;
+}
 
+button:hover {
+    color: #ffd303;
+    background-color: #ff2b00;
 }
 
 
@@ -88,5 +92,14 @@ LARGE SCREENS
     #welcome-sign {
         width: 80%;
         height: 80%;  
+    }
+
+    h1 {
+        margin-top: -4%;
+    }
+    
+    h2 {
+        margin-top: 0%;
+        margin-bottom: 5%;
     }
 }
