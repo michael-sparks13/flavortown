@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Westchester Parking Lots and Open Spaces</title>
+    <title>Welcome to Flavortown</title>
     <meta
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
@@ -11,208 +11,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,900i"
-      rel="stylesheet"
-    />
-    <style>
-      /* UK Colors: #c7c9c8 light gray #63666a dark gray #15397f dark blue #009bda light blue #0033a0 official blue */
-      body {
-        margin: 0;
-        padding: 0;
-        background: rgb(0, 0, 0);
-        font-family: "Lato", sans-serif;
-        font-weight: 400;
-        color: #009bda;
-        font-size: 1.1em;
-      }
-      iframe {
-        width: 100%;
-        height: 600px;
-      }
-      section {
-        width: 80%;
-        margin: 10px auto;
-      }
-      h1 {
-        font-family: "Lato", sans-serif;
-        font-weight: 800;
-        font-size: 1.8em;
-        font-style: italic; /* The em unit. 3x the current size */
-        letter-spacing: 0.01em;
-        margin: 0 0 5px 0; /* text-transform: uppercase; */
-      }
-      h2 {
-        font-family: "Lato", sans-serif;
-        font-weight: 300;
-        color: #0033a0;
-        font-size: 1.5em;
-        letter-spacing: 0.06em;
-        font-style: italic;
-        margin: 0 0 25px 0;
-      }
-      h3 {
-        font-family: "Lato", sans-serif;
-        font-weight: 300;
-        color: #cbd5e8;
-        font-size: 1.4em;
-        letter-spacing: 0.06em;
-        font-style: italic;
-      }
-      p {
-        font-size: 1em;
-        line-height: 1.5em;
-        margin: 15px;
-      }
-      a {
-        color: #c7c9c8;
-        text-decoration: none;
-        font-size: 0.8em;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      #map {
-        width: 100%;
-        margin: 0px auto;
-      }
-      .max-image-width {
-        width: 100%;
-      }
-      .linkbox {
-        margin: 3px 0 20px 0;
-        display: block;
-        font-weight: 300;
-      }
-      hr {
-        border: 0px;
-        border-bottom: 1px solid #3d3d3d;
-        padding-top: 20px;
-      }
-      /* Use float property to make two-column layout */
-      .first-column {
-        float: left;
-        width: 48%;
-        padding-right: 10%;
-      }
-      .column {
-        width: fit-content;
-      }
-      /* Clear floats after the columns */
-      .row {
-        display: flexbox;
-        flex-direction: row;
-      }
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-      .svg-title {
-        float: left;
-        width: 75px;
-        margin: -8px 10px -8px 0;
-      }
-      /* When browser is 800px wide or less */
-      @media screen and (max-width: 800px) {
-        .first-column,
-        .column {
-          width: 100%;
-        }
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <iframe src="map.html"></iframe>
-    <section>
-      <a href="map.html" class="linkbox">Full-screen version</a>
-      <!-- <img src="arches.svg" class="svg-title" /> -->
-      <h1>Parking Lots, Open Spaces and Human Races in Westchester County</h1>
-      <h2>University of Kentucky Geography</h2>
-      <div class="row">
-        <div class="first-column">
-          <p>
-            One million people live in Westchester. If we think about our built
-            environment as a physical manifestation of our vales, the relative
-            amount of parking lots vs. open spaces in Westchester tells us a lot
-            about what we value (and who we value).
-          </p>
-          <p>
-            Of course, our built environment is influence by our economic and
-            sociographic conditions. Play around with the "predeominate race"
-            toggle to see how Westchester residents' surroundings vary by race.
-            And don't forget to zoom in!
-          </p>
-          <p>
-            "Open space" is basically any non-built environment, including
-            public & private parks. Water supply lands, and farms.
-          </p>
-        </div>
-        <div class="column">
-          <h3>How Westchester Uses Its Space</h3>
-          <ul>
-            <li>11 sq miles of parking lots</li>
-            <li>Over 42 sq miles of state & county parklands</li>
-            <li>
-              31 sq miles of water supply lands (much of which provides NYC's
-              water)
-            </li>
-            <li>3 sq miles of cemeteries!</li>
-          </ul>
-          <p>
-            Most of the county's parking lots are concentrated in two areas:
-          </p>
-          <ul>
-            <li>
-              Along travel corridors like I-95 from north to south and 287 from
-              east to west.
-            </li>
-            <li>
-              On the edges of the Bronx, particulary in Pelham Manor, Mount
-              Vernon and Yonkers.
-            </li>
-          </ul>
-        </div>
+    <div class="bg">
+      <div class="welcome">
+        <img id="welcome-sign" src="welcome-flavortown.svg" />
+        <h1>
+          An interactive map of every restaurant on Diners, Drive-ins, and
+          Dives
+        </h1>
+        <h2>Real Deal Righteous</h2>
       </div>
-      <div class="row">
-        <p>
-          The story starts to get really interesting when we add race into the
-          mix. First, it's important to note that Westchester is a majority
-          white: 52% White alone 26% Hispanic or Latino 17% Black or African
-          American White is the predominate race basically everywhere in the
-          county except Yonkers and Mount Vernon. When we look at areas where
-          the majority of the population is either Hispanic or Black, those
-          areas correlate almost entirely with the major roads & transportation
-          hubs. Are Black and Hispanic persons in Westchester–one of the most
-          affluent county's in the population–exposed to more car pollution than
-          its White residents? More study is needed, but the data we have
-          available raises important questions.
-        </p>
+
+      <div>
+        <a href="map.html">See the Map</a>
       </div>
-      <div class="column">
-        <p>
-          Data provided by
-          <a href="https://gis.westchestergov.com/"
-            >Westchester County Geohub</a
-          >
-        </p>
-        <p>
-          Made with Mapbox & QGIS. For full details on the data sources,
-          workflow, and processes see the
-          <a href="https://github.com/michael-sparks13/lots-and-spaces"
-            >ReadMe</a
-          >
-          on Github.
-        </p>
-      </div>
-      <hr />
-      <h4>
-        <a href="https://michaelsparks13.github.io/portfolio-website/"
-          >Map Produced by Michael Sparks</a
-        >
-      </h4>
-      <h5>New Maps Plus @ Kentucky</h5>
-      <img src="logo-color-400px.png" alt="Uinversity of Kentucky Geography" />
-    </section>
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>

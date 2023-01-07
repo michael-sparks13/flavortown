@@ -1,0 +1,60 @@
+/*
+======================
+MOBILE FIRST
+======================
+*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #ff2b00;
+}
+
+
+.bg {
+    z-index: -100;
+    background-image: url('Guy Fieris head.svg');
+    background-repeat: repeat;
+    background-size: 20%;
+}
+
+.welcome {
+    padding-top: 20%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+.welcome h1,h2 {
+    color: #ffd303;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    text-shadow: 2px 2px black;
+}
+
+.welcome h2 {
+    font-style: italic;
+    font-weight: 600;
+}
+#welcome-sign {
+    width: 120%;
+    height: 120%;  
+}
+
+
+
+
+/*
+======================
+LARGE SCREENS
+======================
+*/
+
+@media screen and (min-width: 480px) {
+    .welcome {
+        padding-top: 5%;
+    }
+}
