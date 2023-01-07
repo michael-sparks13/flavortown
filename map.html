@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Westchester Lots and Spaces</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="map-overlay" id="legend"></div>
+
+    <script>
+      // updated to my access token
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoibWljaGFlbHNwYXJrczEzIiwiYSI6ImNsMmRoczNjMDAwMWkzYm10dzRyb3gxenQifQ.56aTkg40fV3OsQibg27VEA";
+      // ------------------------------------------------
+
+      var map = new mapboxgl.Map({
+        container: "map",
+
+        // #uses lots-monochrome style
+        style: "mapbox://styles/michaelsparks13/cl4rew2k6002s14o711ft029j",
+        // ----------------------------------------------
+
+        // centers on Westchester County, NY
+        center: [-99.13, 40.648],
+        zoom: 2.8,
+        // ----------------------------------------------
+      });
+    </script>
+  </body>
+</html>
