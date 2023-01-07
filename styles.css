@@ -20,6 +20,7 @@ body {
 
 .welcome {
     padding-top: 10%;
+    padding-bottom: -50%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -39,11 +40,37 @@ body {
     font-style: italic;
     font-weight: 600;
 }
+
+h1 {
+    margin-top: -7%;
+}
+
+h2 {
+    margin-top: -2%;
+    margin-bottom: 10%;
+}
 #welcome-sign {
     width: 120%;
     height: 120%;  
 }
 
+.map-link {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.map-link button {
+    border-radius: 50%;
+    padding: 15px;
+    border: 1px solid #ffd303;
+    background-color: #ffd303;
+    align-self: auto;
+    color: #ff2b00;
+    text-shadow: 20% black;
+
+}
 
 
 
@@ -56,5 +83,10 @@ LARGE SCREENS
 @media screen and (min-width: 480px) {
     .welcome {
         padding-top: 0%;
+    }
+
+    #welcome-sign {
+        width: 80%;
+        height: 80%;  
     }
 }
