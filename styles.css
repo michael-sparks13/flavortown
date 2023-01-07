@@ -19,7 +19,7 @@ body {
 }
 
 .welcome {
-    padding-top: 20%;
+    padding-top: 10%;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -55,6 +55,6 @@ LARGE SCREENS
 
 @media screen and (min-width: 480px) {
     .welcome {
-        padding-top: 5%;
+        padding-top: 0%;
     }
 }
