@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Westchester Lots and Spaces</title>
+    <title>Flavortown, USA</title>
     <meta
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
@@ -12,35 +12,34 @@
       href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css"
       rel="stylesheet"
     />
-    <style>
-      #map {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/map.css" />
   </head>
   <body>
     <div id="map"></div>
     <div class="map-overlay" id="legend"></div>
 
     <script>
-      // updated to my access token
       mapboxgl.accessToken =
         "pk.eyJ1IjoibWljaGFlbHNwYXJrczEzIiwiYSI6ImNsMmRoczNjMDAwMWkzYm10dzRyb3gxenQifQ.56aTkg40fV3OsQibg27VEA";
       // ------------------------------------------------
 
-      var map = new mapboxgl.Map({
+      let zoom = 0
+      const mq = window.matchMedia("(min-width: 480px)");
+
+      if (mq.matches) {
+        zoom = 2.8
+      } else {
+        zoom = 2
+      }
+
+      const map = new mapboxgl.Map({
         container: "map",
 
-        // #uses lots-monochrome style
         style: "mapbox://styles/michaelsparks13/cl4rew2k6002s14o711ft029j",
         // ----------------------------------------------
 
-        // centers on Westchester County, NY
         center: [-99.13, 40.648],
-        zoom: 2.8,
+        zoom: zoom
         // ----------------------------------------------
       });
     </script>

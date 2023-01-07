@@ -12,7 +12,7 @@ body {
 
 
 .bg {
-    background-image: url('Guy Fieris head.svg');
+    background-image: url('../images/Guy Fieris head.svg');
     background-repeat: repeat;
     background-size: 20%;
 }
@@ -77,8 +77,6 @@ button:hover {
     background-color: #367cc9;
     color: white;
 }
-
-
 
 /*
 ======================
