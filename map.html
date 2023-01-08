@@ -21,7 +21,7 @@
   <body>
     <div id="map"></div>
     <div id="map-overlay">
-      <span id="close">&times;</span>
+      
       <p>Zoom to see over 1,300 restaurants!</p>
     </div>
 
@@ -59,6 +59,8 @@
               const city = e.features[0].properties.city
               const state = e.features[0].properties.state
               const name = e.features[0].properties.name
+              const air_date = 'Deember 2022'
+              console.log(e.features[0].properties)
 
               if (!address) {
                 address = ""
@@ -74,7 +76,8 @@
               new mapboxgl.Popup()
                 .setLngLat(coordinates)
                 .setHTML('<div><h3>' + name + '</h3></div>' + 
-                          '<div><h4>' + description + '</h4></div>')
+                          '<div><h4>' + description + '</h4></div>' +
+                          '<div><h5>' + 'Aired ' + air_date + '</h5></div>')
                 .addTo(map);
             })
 

@@ -12,11 +12,11 @@ MOBILE FIRST
 }
 
 #map-overlay {
-  position: absolute;
-  bottom: 15%;
+  position: relative;
+  margin-top: 15%;
   left: 15%;
-  width: 20%;
-  height: 50px;
+  width: fit-content;
+  height: fit-content;
   color: #ff2b00;
   background-color:white;
   border: 0.2px solid black;
@@ -28,26 +28,19 @@ MOBILE FIRST
 }
 
 #close {
-  margin-left: 90%;
   color:rgb(74, 74, 74);
-  font-size: 1.4rem;
+  font-size: 0.8rem;
 }
 
-/*
-======================
-LARGE SCREENS
-======================
-*/
 
-@media screen and (min-width: 480px) {
-  #map-overlay {
-    width: 20%;
-    position: absolute;
-  }
+.mapboxgl-popup-content h4 {
+  font-weight: 300;
+  font-size: 0.8rem;
+}
 
-  #close {
-    margin-left: 98%;
-  }
+.mapboxgl-popup-content h5 {
+  font-weight: 600;
+  font-size: 0.8rem;
 }
 
 /*
@@ -73,3 +66,16 @@ MAPBOX POPUP
   margin-left: -10px;
   margin-right: -10px;
 }
+
+/*
+======================
+LARGE SCREENS
+======================
+*/
+
+@media screen and (min-width: 480px) {
+  
+
+ 
+}
+
