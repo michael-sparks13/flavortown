@@ -27,9 +27,10 @@ MOBILE FIRST
   border-radius: 2%;
 }
 
-#close {
+#close-instructions{
   color:rgb(74, 74, 74);
   font-size: 0.8rem;
+  text-align: center;
 }
 
 
@@ -75,6 +76,10 @@ LARGE SCREENS
 
 @media screen and (min-width: 480px) {
   
+  #map-overlay {
+    margin-top: 20%;
+    left: 30%;
+  }
 
  
 }

@@ -23,6 +23,7 @@
     <div id="map-overlay">
       
       <p>Zoom to see over 1,300 restaurants!</p>
+      <p id='close-instructions'></p>
     </div>
 
     <script>
@@ -31,13 +32,18 @@
             // ------------------------------------------------
 
             let zoom = 0;
+            let instructions = document.getElementById('close-instructions');
             const mq = window.matchMedia("(min-width: 480px)");
-
+            
             if (mq.matches) {
               zoom = 2.9;
+              instructions.textContent = "(click to close)"
             } else {
               zoom = 2;
+              instructions.textContent = "(tap to close)"
             }
+
+
 
             const map = new mapboxgl.Map({
               container: "map",
