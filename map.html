@@ -20,7 +20,8 @@
   </head>
   <body>
     <div id="map"></div>
-    <div id="map-overlay">
+    <div id="map-overlay"> 
+      <span id="close">&times;</span>
       <p>Zoom and scroll to see over 1,300 restaurants!</p>
     </div>
 
@@ -29,13 +30,13 @@
         "pk.eyJ1IjoibWljaGFlbHNwYXJrczEzIiwiYSI6ImNsMmRoczNjMDAwMWkzYm10dzRyb3gxenQifQ.56aTkg40fV3OsQibg27VEA";
       // ------------------------------------------------
 
-      let zoom = 0
+      let zoom = 0;
       const mq = window.matchMedia("(min-width: 480px)");
 
       if (mq.matches) {
-        zoom = 2.8
+        zoom = 2.9;
       } else {
-        zoom = 2
+        zoom = 2;
       }
 
       const map = new mapboxgl.Map({
@@ -45,17 +46,12 @@
         // ----------------------------------------------
 
         center: [-99.13, 40.648],
-        zoom: zoom
-        
+        zoom: zoom,
       });
 
       const overlay = document.getElementById("map-overlay");
-      document.addEventListener('mousemove', (e) => {
-        overlay.style.opacity = 0;
-      });
-
-      document.addEventListener('touchmove', (e) => {
-        overlay.style.opacity = 0;
+      document.addEventListener("click", (e) => {
+        overlay.style.display = "none";
       });
     </script>
   </body>

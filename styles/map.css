@@ -1,20 +1,51 @@
+/*
+======================
+MOBILE FIRST
+======================
+*/
+
 #map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#map-overlay {
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  width: 30%;
+  height: auto;
+  color: #ff2b00;
+  background-color:white;
+  border: 0.2px solid black;
+  padding: 1%;
+  font-family: "Raleway", sans-serif;
+  text-align: left;
+  font-weight: 800;
+  border-radius: 2%;
+}
+
+#close {
+  margin-left: 90%;
+  color:rgb(74, 74, 74);
+  font-size: 1.4rem;
+}
+
+/*
+======================
+LARGE SCREENS
+======================
+*/
+
+@media screen and (min-width: 480px) {
+  #map-overlay {
+    width: 20%;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
   }
 
-  #map-overlay {
-      position: absolute;
-      bottom: 15%;
-      left: 15%;
-      width: 35%;
-      height: auto;
-      background-color: white;
-      padding: 1%;
-      font-family: 'Raleway', sans-serif;
-      text-align: center;
-      font-weight: 800;
-      border-radius: 2%;
+  #close {
+    margin-left: 98%;
   }
+}
