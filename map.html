@@ -20,39 +20,58 @@
   </head>
   <body>
     <div id="map"></div>
-    <div id="map-overlay"> 
+    <div id="map-overlay">
       <span id="close">&times;</span>
-      <p>Zoom and scroll to see over 1,300 restaurants!</p>
+      <p>Zoom to see over 1,300 restaurants!</p>
     </div>
 
     <script>
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoibWljaGFlbHNwYXJrczEzIiwiYSI6ImNsMmRoczNjMDAwMWkzYm10dzRyb3gxenQifQ.56aTkg40fV3OsQibg27VEA";
-      // ------------------------------------------------
+            mapboxgl.accessToken =
+              "pk.eyJ1IjoibWljaGFlbHNwYXJrczEzIiwiYSI6ImNsMmRoczNjMDAwMWkzYm10dzRyb3gxenQifQ.56aTkg40fV3OsQibg27VEA";
+            // ------------------------------------------------
 
-      let zoom = 0;
-      const mq = window.matchMedia("(min-width: 480px)");
+            let zoom = 0;
+            const mq = window.matchMedia("(min-width: 480px)");
 
-      if (mq.matches) {
-        zoom = 2.9;
-      } else {
-        zoom = 2;
-      }
+            if (mq.matches) {
+              zoom = 2.9;
+            } else {
+              zoom = 2;
+            }
 
-      const map = new mapboxgl.Map({
-        container: "map",
+            const map = new mapboxgl.Map({
+              container: "map",
 
-        style: "mapbox://styles/michaelsparks13/cl4rew2k6002s14o711ft029j",
-        // ----------------------------------------------
+              style: "mapbox://styles/michaelsparks13/cl4rew2k6002s14o711ft029j",
+              // ----------------------------------------------
 
-        center: [-99.13, 40.648],
-        zoom: zoom,
-      });
+              center: [-99.13, 40.648],
+              zoom: zoom,
+            });
 
-      const overlay = document.getElementById("map-overlay");
-      document.addEventListener("click", (e) => {
-        overlay.style.display = "none";
-      });
+            const overlay = document.getElementById("map-overlay");
+            document.addEventListener("click", (e) => {
+              overlay.style.display = "none";
+            });
+
+            map.on('click', 'triple-d-dybwp9 (1)', (e) => {
+              const address = e.features[0].properties.address
+              const city = e.features[0].properties.city
+              const state = e.features[0].properties.state
+              const name = e.features[0].properties.name
+
+              const description = name + ' ' + address + ' ' + city + ', ' + state
+
+              let coordinates = e.features[0].properties.latlong.split(',');
+              coordinates = [coordinates[1], coordinates[0]]
+              
+              new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+            })
+
+          
     </script>
   </body>
 </html>
