@@ -49,3 +49,27 @@ LARGE SCREENS
     margin-left: 98%;
   }
 }
+
+/*
+======================
+MAPBOX POPUP 
+======================
+*/
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  font-family: "Raleway", sans-serif; 
+}
+
+.mapboxgl-popup-content h3 {
+  background: #367cc9;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  margin-top: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+}

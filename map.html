@@ -55,19 +55,26 @@
             });
 
             map.on('click', 'triple-d-dybwp9 (1)', (e) => {
-              const address = e.features[0].properties.address
+              let address = e.features[0].properties.address
               const city = e.features[0].properties.city
               const state = e.features[0].properties.state
               const name = e.features[0].properties.name
 
-              const description = name + ' ' + address + ' ' + city + ', ' + state
+              if (!address) {
+                address = ""
+              }
+
+              const description =  address + ' ' + city + ', ' + state
+
+              
 
               let coordinates = e.features[0].properties.latlong.split(',');
               coordinates = [coordinates[1], coordinates[0]]
               
               new mapboxgl.Popup()
                 .setLngLat(coordinates)
-                .setHTML(description)
+                .setHTML('<div><h3>' + name + '</h3></div>' + 
+                          '<div><h4>' + description + '</h4></div>')
                 .addTo(map);
             })
 
